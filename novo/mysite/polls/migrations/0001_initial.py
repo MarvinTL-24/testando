@@ -16,16 +16,16 @@ class Migration(migrations.Migration):
             name='Choice',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('choice_text', models.CharField(max_length=200)),
-                ('votes', models.IntegerField(default=0)),
+                ('respostas', models.CharField(max_length=200)),
+                ('votos', models.IntegerField(default=0)),
             ],
         ),
         migrations.CreateModel(
             name='Question',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('question_text', models.CharField(max_length=200)),
-                ('pub_date', models.DateTimeField(verbose_name='date published')),
+                ('perguntas', models.CharField(max_length=200)),
+                ('publicar', models.DateTimeField(verbose_name='Dia de publicar')),
             ],
         ),
         migrations.AddField(
